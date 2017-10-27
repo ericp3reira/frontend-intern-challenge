@@ -121,7 +121,17 @@ header > img {
 
 .top5 {
   text-align: center;
-  padding: 4%;
+  padding: 4% 4% 0 4%;
+}
+.top5-arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 3em 3em 0 3em;
+  border-color: #fff transparent transparent transparent;
+  position: relative;
+  bottom: -3em;
 }
 .top5-list {
   margin: 3% auto 0 auto;
@@ -149,7 +159,7 @@ header > img {
 .hits {
   background-color: #eee;
   text-align: center;
-  padding: 4%;
+  padding: 4.5em 4%;
 }
 .hits-counter {
   background-color: #fff;
@@ -170,7 +180,7 @@ header > img {
 footer {
   max-width: 600px;
   margin: 0 auto;
-  padding: 2%;
+  padding: 2em;
   display: flex;
   justify-content: space-between;
 }
