@@ -1,6 +1,7 @@
 module.exports = grunt => {
   require("load-grunt-tasks")(grunt);
   grunt.initConfig({
+    // Minifica o html, css e js
     htmlmin: {
       dist: {
         options: {
@@ -31,6 +32,7 @@ module.exports = grunt => {
         dest: "dist/assets/js/app.js"
       }
     },
+    // Transpila ES6 para ES5
     babel: {
       options: {
         sourceMap: true,
@@ -42,6 +44,8 @@ module.exports = grunt => {
         }
       }
     },
+    // Copia as pastas img e data
+    // para a versão final
     copy: {
       main: {
         files: [

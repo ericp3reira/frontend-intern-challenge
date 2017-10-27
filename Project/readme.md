@@ -16,6 +16,7 @@ Como é um site simples, decidi fazer o desafio sem usar frameworks ou bibliotec
 Para a versão final foram usadas estas tecnologias:
 
 - HTML5, CSS3 e ES6;
+- Flexbox - a responsividade foi feita sem usar media query, apenas usando flexbox e dimensões máximas;
 - NPM - para instalação dos pacotes e automação;
 - Grunt - para a automação da build final:
   - Babel - para fazer o transpiler do ES6;
