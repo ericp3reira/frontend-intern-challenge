@@ -8,9 +8,6 @@ const linkResult = document.querySelector(".link-form-result");
 const linkResultText = document.querySelector(".link-form-result-text");
 const linkResultClose = document.querySelector(".link-form-result-close");
 
-// Adquire o JSON de links e põe os dados no DOM
-document.addEventListener("DOMContentLoaded", () => getLinksJSON(), false);
-
 // Limpa o input quando o usuário seleciona
 linkInput.addEventListener("click", () => {
   if (linkBtnText.textContent === "ENCURTAR") {
@@ -78,8 +75,8 @@ const copyToClipboard = () => {
   alert("Copiado!");
 };
 
-// Manipula o JSON de links
-const getLinksJSON = () => {
+// Adquire o JSON de links e põe os dados no DOM
+const getLinksJSON = (() => {
   const request = new Request("./assets/data/urls.json"); // Acessa o JSON
   fetch(request) // Gera a promise para o request
     .then(response => response.json())
@@ -104,4 +101,4 @@ const getLinksJSON = () => {
         .reduce((sum, hits) => sum + hits)
         .toLocaleString();
     });
-};
+})();
